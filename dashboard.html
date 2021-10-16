@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: #36454f;
+    }
+
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: #ffac00;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* aside {
+      width: 10%;
+      padding-left: 15px;
+      margin-left: 15px;
+      float: right;
+      font-style: italic;
+      
+    } */
+
+    .section {
+
+      width: 70px;
+      height: 300px;
+      border: 1px solid #c3c3c3;
+      display: inline-block;
+      flex-wrap: wrap;
+      align-content: center;
+
+
+    }
+
+    /* .section div {
+  width: 70px;
+  height: 70px;
+  padding: 100%;
+  padding-right: 100%;
+} */
+
+    
+
+    .right {
+      float: right;
+      width: 200px;
+      height: 400px;
+      border: 2px solid #ffc40c;
+      padding: 20px;
+      margin-top: 0%;
+    }
+    .left {
+      text-align: left;
+      border: 1px, gray;
+      padding: 0px;
+      margin-right: 0%;
+      font-size: 25px;
+      left: 0%;
+      width: 500px;
+      font-size: 17px;
+    }
+    .left1 {
+      float: left;
+      width: 400px;
+      height: 400px;
+      border: 1px solid #ffc40c;
+      padding: 20px;
+      margin-top: 0%;
+      margin-bottom: 0%;
+    }
+    .left2 {
+      float: left;
+      width: 400px;
+      height: 400px;
+      border: 1px solid #ffc40c;
+      padding: 20px;
+      margin-top: 1%;
+      margin-right: 1400px;
+    }
+    .left2,h2 {
+      border-bottom: 1px solid #ffc40c;
+      margin-bottom: 0%;
+    }
+
+    .sec1 {
+      border: 1px solid #ffc40c;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      margin-right: 500px;
+      margin-left: 500px;
+      padding-right: 450px;
+      padding-left: 50px;
+      position: absolute;
+      background-color: white;
+      text-align: left;
+
+    }
+
+    .sec2 {
+      border: 1px solid #ffc40c;
+      align-content: center;
+      margin-top: 550px;
+      margin-bottom: 100px;
+      margin-right: 0px;
+      margin-left: 500px;
+      padding-right: 450px;
+      padding-left: 50px;
+      position: absolute;
+      background-color: white;
+
+    }
+
+    .all-browsers {
+      margin: 800px;
+      margin-left: 0%;
+      margin-right: 0%;
+      margin-top: 50%;
+      margin-bottom: 3%;
+      padding: 5px;
+      background-color: lightgrey;
+      border: 1px solid #ffc40c;
+    }
+
+    .all-browsers>h1,
+    .browser {
+      margin: 10px;
+      padding: 5px;
+    }
+
+    .browser {
+      background: white;
+      border: 1px solid #ffc40c;
+    }
+
+    .browser>h2,
+    p {
+      margin: 4px;
+      font-size: 90%;
+
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: lightgrey;
+      border-top: 5px solid #ffc40c;
+      color: white;
+    }
+    h1 {
+      border-bottom: 1px solid #ffc40c;
+    }
+
+    /* .topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+.topnav .search-container {
+  float: right;
+} */
+  </style>
+  <div class="logo">
+    <img src="soas-logo.png" class="img" alt="soas-logo" width="300" height="90">
+  </div>
+
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a style="background: #ffac00;" href="#home">SOAS Moodle</a>
+
+
+    <div class="dropdown">
+      <button class="dropbtn">Support
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Support for Students</a>
+        <a href="#">Support for Staff</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Careers
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Welocme to SOAS Careers</a>
+        <a href="#">Microplacement course</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Skills
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Skills for Success</a>
+        <a href="https://www.soas.ac.uk/llti/studyskills/workshops/index.php?showprevious=1">Study Skills</a>
+        <a href="#">English for Academic Purposes</a>
+        <a href="#">information and Ddigital Literacy</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Student Services
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Student Advice and Wellbeing</a>
+        <a href="#">SOAS Online Student Services</a>
+        <a href="#">Sidability and Neurodiversity Team</a>
+        <a href="#">SOAS Students Union</a>
+      </div>
+    </div>
+    <a href="#news">Exam Submistion Support</a>
+    <div class="dropdown">
+      <button class="dropbtn">My Modules
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="https://www.soas.ac.uk/courseunits/36711.html">Module 1</a>
+        <a href="https://www.soas.ac.uk/courseunits/155100001.html">Module 2</a>
+        <a href="https://www.soas.ac.uk/llti/studyskills/helpyourself/file79112.pdf">Module 3</a>
+        <a href="https://www.soas.ac.uk/courseunits/152900117.html">Language, Learning and Writing</a>
+        <a href="https://www.soas.ac.uk/courseunits/155200093.html">Critical Thinking, Writing, and Research</a>
+        <a href="https://www.soas.ac.uk/courseunits/38774.html">Academic literacy </a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Jassim Al Jaber
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Dashboard</a>
+        <a href="#">Profile</a>
+        <a href="#">Grades</a>
+        <a href="#">Messages</a>
+        <a href="#">References</a>
+        <a href="#">Log Out</a>
+      </div>
+    </div>
+    <!-- <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div> -->
+
+  </div>
+
+  <img src="banner1.jpg" class="img" alt="banner" width="100%" height="500">
+
+
+
+  <div class="sec1">
+
+    <h1>My Modules</h1>
+
+    <p class="left"> - Global Diplomacy: Dissertation (Online) - Stage 1 April 2021 (15DISD201-D21/E)</p>
+    <p class="left"> - Global Diplomacy: Dissertation (Online) - Stage 1 October 2020 (15DISD201-D21/D)</p>
+    <p class="left"> - Global Diplomacy: The Art of Negotiation (Online) October 2020 (15DISD012-D21/D)</p>
+    <p class="left"> - Online CISD Student's Programme Area (Online CISD Student's Programme Area)</p>
+    <p class="left"> - Programme Area (CISD Prog Area)</p>
+    <p class="left"> - Working Digitally (Working Digitally)</p>
+
+  </div>
+
+  <div class="sec2">
+    <h2>Site News</h2>
+    <p class="left">
+      How to create a Panopto block in your module
+      by Michael Baptista - Thursday, 12 March 2020, 3:57 PM
+    </p>
+    <p class="left">
+      Panopto - How to Create a Webcast URL and a Waiting Room in Advance
+    </p>
+    <p class="left">
+      Setting up Collaborate Session in Moodle
+    </p>
+  </div>
+
+
+
+
+  <div>
+    <aside>
+      <p class="right">
+        Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international
+        pavilions,
+        award-winning fireworks and seasonal special events.
+      </p>
+    </aside>
+  </div>
+
+
+  <aside>
+    <div class="left1">
+      <h2>Navigation</h2>
+
+      <h4>Dashboard</h4>
+      <h4>My Modules</h4>
+
+      <p>15DISD201-D21/E</p>
+      <p>15DISD201-D21/D</p>
+      <p>15DISD012-D21/D</p>
+      <p>Online CISD Student's Programme Area</p>
+      <p>CISD Prog Area</p>
+      <p>Working Digitally</p>
+    </div>
+
+
+  </aside>
+  <aside>
+    <div class="left2">
+      <h2>Navigation</h2>
+
+      <h4>Dashboard</h4>
+      <h4>My Modules</h4>
+
+      <p>15DISD201-D21/E</p>
+      <p>15DISD201-D21/D</p>
+      <p>15DISD012-D21/D</p>
+      <p>Online CISD Student's Programme Area</p>
+      <p>CISD Prog Area</p>
+      <p>Working Digitally</p>
+    </div>
+
+
+  </aside>
+
+</body>
+
+
+
+<article class="all-browsers">
+  <h1>Most Popular Browsers</h1>
+  <article class="browser">
+    <h2>Google Chrome</h2>
+    <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web
+      browser today!</p>
+  </article>
+  <article class="browser">
+    <h2>Mozilla Firefox</h2>
+    <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web
+      browser since January, 2018.</p>
+  </article>
+  <article class="browser">
+    <h2>Microsoft Edge</h2>
+    <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet
+      Explorer.</p>
+  </article>
+</article>
+
+<footer>
+  <p>Author: Hege Refsnes<br>
+    <a href="mailto:hege@example.com">hege@example.com</a>
+  </p>
+</footer>
+
+</html>
